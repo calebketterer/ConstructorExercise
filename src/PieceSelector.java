@@ -8,9 +8,10 @@ public class PieceSelector {
 
         // Pieces need location, index, pt value, movement list
 
+        //Random Piece Selector
         if(faction==-1||type==-1){
             Random rand = new Random();
-            faction = rand.nextInt(4);
+            faction = rand.nextInt(5);
             type = rand.nextInt(5);
         }
 
@@ -29,7 +30,6 @@ public class PieceSelector {
         piece[1][4] = PieceList.Infantry;
 
         // Conspiracy
-
         piece[2][0] = PieceList.Usurper;
         piece[2][1] = PieceList.TortureChamber;
         piece[2][2] = PieceList.Emissary;
@@ -50,6 +50,6 @@ public class PieceSelector {
         piece[4][3] = PieceList.Conjurer;
         piece[4][4] = PieceList.Spectre;
 
-        return "The " + piece[faction][type].name + " pieces belong to the " + piece[faction][type].faction + " faction and are worth " + piece[faction][type].value + " points.";
+        return "The " + piece[faction][type].name + " pieces belong to the " + piece[faction][type].faction + " faction.";
     }
 }
